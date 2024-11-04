@@ -1,0 +1,11 @@
+<playlist>
+    <song>
+        <title>Song 1</title>
+        <artist>Artist 1</artist>
+    </song>
+    <song>
+        <title>Song 2</title>
+        <artist>Artist 2</artist>
+    </song>
+    <!-- Add more songs here -->
+</playlist>
