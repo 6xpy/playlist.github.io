@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('playlist.xml')
+    fetch('fav.xml')
         .then(response => response.text())
         .then(data => {
             const parser = new DOMParser();
             const xml = parser.parseFromString(data, 'text/xml');
-            const songs = xml.getElementsByTagName('song');
+            const tracks = xml.querySelector('dict > dict > dict');
             const playlist = document.getElementById('playlist');
 
             let songList = '';
-            for (let i = 0; i < songs.length; i++) {
-                const title = songs[i].getElementsByTagName('title')[0].textContent;
-                const artist = songs[i].getElementsByTagName('artist')[0].textContent;
-                songList += `<li>${title} by ${artist}</li>`;
-            }
+            tracks.querySelectorAll('dict').forEach(track => {
+                const title = track.querySelector('key:contains(Name) + string')?.textContent;
+                const artist = track.querySelector('key:contains(Artist) + string')?.textContent;
+
+                if (title && artist) {
+                    songList += `<li>${title} by ${artist}</li>`;
+                }
+            });
             playlist.innerHTML = songList;
         })
         .catch(error => console.error('Error fetching XML:', error));
