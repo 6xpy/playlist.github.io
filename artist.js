@@ -2,6 +2,22 @@ const urlParams = new URLSearchParams(window.location.search);
 const artistName = urlParams.get('name');
 document.getElementById('artist-name').innerText = artistName;
 
+const artistImages = {
+    "Brennan Jones": "images/brennan_jones.jpg",
+    "Playboi Carti": "images/playboi_carti.jpg",
+    "Destroy Lonely": "images/destroy_lonely.jpg",
+    "Ken Carson": "images/ken_carson.jpg",
+    "greatestredefined": "images/greatestredefined.jpg",
+    "ian": "images/ian.jpg",
+    "Hi-C": "images/hi-c.jpg",
+    "Lil Uzi Vert": "images/lil_uzi_vert.jpg",
+    "LUCKI": "images/lucki.jpg",
+    "OsamaSon": "images/osamason.jpg",
+    "Nettspend": "images/nettspend.jpg",
+    "Slash4L": "images/slash4l.jpg",
+    "Yeat": "images/yeat.jpg"
+};
+
 const songs = {
     "Brennan Jones": [
         { title: "rip corbin", file: "songs/brennan_jones/rip_corbin.mp3" },
@@ -21,10 +37,15 @@ const songs = {
         { title: "bill cosby", file: "songs/brennan_jones/bill_cosby.mp3" },
         { title: "believeinthekid", file: "songs/brennan_jones/believeinthekid.mp3" },
     ],
-
-
     // Add other artists and their songs
 };
+
+const artistImage = document.getElementById('artist-image');
+if (artistImages[artistName]) {
+    artistImage.src = artistImages[artistName];
+} else {
+    artistImage.src = 'images/default.jpg';
+}
 
 const songList = document.getElementById('song-list');
 if (songs[artistName]) {
