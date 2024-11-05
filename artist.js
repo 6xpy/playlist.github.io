@@ -1,3 +1,7 @@
+const urlParams = new URLSearchParams(window.location.search);
+const artistName = urlParams.get('name');
+document.getElementById('artist-name').innerText = artistName;
+
 const artistData = {
     "Brennan Jones": {
         img: "images/brennan_jones.jpg",

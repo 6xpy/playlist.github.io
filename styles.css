@@ -4,7 +4,6 @@
     --color: #faa700;
     --color-light: #f5ede1;
     --dark: #a7a7a7;
-    --dark: #8a8a8a;
     --darker: #303030;
     --sans-serif: 'Roboto', sans-serif;
 }
@@ -36,14 +35,13 @@ body {
     z-index: -1;
     img {
         max-width: 100%;
-        max-height:100vh;
+        max-height: 100vh;
         box-shadow: inset 0px -17vw 30vw 1vw #131313;
     }
     + section {
         margin-top: 60vmin;
         background: transparent;
         --dark: rgba(white, .5);
-        --dark: rgba(white, .6);
         --darker: rgba(white, .8);
         .bookmark {
             border-color: rgba(white, .2);
@@ -65,10 +63,10 @@ section {
     color: var(--darker);
     color: rgba(white, .8);
     .album-info {
-        &:after { 
+        &:after {
             content: " ";
-            display: block; 
-            height: 0; 
+            display: block;
+            height: 0;
             clear: both;
         }
     }
@@ -83,12 +81,14 @@ section {
         img {
             width: 100%;
             margin-bottom: 10px;
-            margin-top:-80px;
+            margin-top: -80px;
             box-shadow: 0 5px 60px -3px rgba(0, 0, 0, 0.18);
         }
     }
     .play {
-        @include flex(center, center);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: white;
         background: var(--color);
         padding: 10px;
@@ -96,7 +96,9 @@ section {
         flex: 1 0 50%;
     }
     .bookmark {
-        @include flex(center, center);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 48px;
         height: 48px;
         border: 3px solid var(--color-light);
@@ -108,7 +110,8 @@ section {
         }
     }
     h2 {
-        @include flex(initial, center);
+        display: flex;
+        align-items: center;
         color: var(--dark);
         font-size: 16px;
         font-weight: 500;
@@ -171,8 +174,10 @@ ol {
     font-weight: 500;
     li {
         counter-increment: number;
-        @include flex(space-between, center);
-        height:45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 45px;
         color: var(--dark);
         span {
             &:not(:last-child) {
@@ -200,6 +205,6 @@ ol {
 }
 
 .actions {
-    @include flex();
+    display: flex;
     flex: 1 1 100%;
 }
