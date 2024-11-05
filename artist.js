@@ -4,8 +4,25 @@ document.getElementById('artist-name').innerText = artistName;
 
 const songs = {
     "Brennan Jones": [
-        { title: "rip corbin", file: "songs/brennan_jones/rip_corbin.mp3" }
+        { title: "rip corbin", file: "songs/brennan_jones/rip_corbin.mp3" },
+        { title: "spicy", file: "songs/brennan_jones/spicy.mp3" },
+        { title: "sterling_ruby_skulls", file: "songs/brennan_jones/sterling_ruby_skulls.mp3" },
+        { title: "pinkpussy", file: "songs/brennan_jones/pinkpussy.mp3" },
+        { title: "keep_quiet_shhhh", file: "songs/brennan_jones/keep_quiet_shhhh.mp3" },
+        { title: "jewelry", file: "songs/brennan_jones/jewelry.mp3" },
+        { title: "gonmakit", file: "songs/brennan_jones/gonmakit.mp3" },
+        { title: "freestyle", file: "songs/brennan_jones/freestyle.mp3" },
+        { title: "duval", file: "songs/brennan_jones/duval.mp3" },
+        { title: "dontevenrap", file: "songs/brennan_jones/dontevenrap.mp3" },
+        { title: "dip", file: "songs/brennan_jones/dip.mp3" },
+        { title: "crackrock", file: "songs/brennan_jones/crackrock.mp3" },
+        { title: "cool_cat", file: "songs/brennan_jones/cool_cat.mp3" },
+        { title: "coming_for_me", file: "songs/brennan_jones/coming_for_me.mp3" },
+        { title: "bill_cosby", file: "songs/brennan_jones/bill_cosby.mp3" },
+        { title: "delieveinthekid", file: "songs/brennan_jones/delieveinthekid.mp3" },
     ],
+
+
     // Add other artists and their songs
 };
 
