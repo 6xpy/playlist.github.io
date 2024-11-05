@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            // Sort songs by artist
+            // Sort songs by artist name alphabetically
             songs.sort((a, b) => a.artist.localeCompare(b.artist));
 
             // Generate the HTML list
