@@ -1,5 +1,5 @@
 const artists = [
-    { name: "Brennan Jones", img: "images/brennan_jones.jpg" },
+    { name: "Brennan Jones", img: "images/brennan_jones.jpeg" },
     { name: "Playboi Carti", img: "images/playboi_carti.jpg" },
     { name: "Destroy Lonely", img: "images/destroy_lonely.jpg" },
     { name: "Ken Carson", img: "images/ken_carson.jpg" },
