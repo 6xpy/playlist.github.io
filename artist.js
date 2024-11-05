@@ -4,7 +4,8 @@ document.getElementById('artist-name').innerText = artistName;
 
 const songs = {
     "Brennan Jones": [
-        // Add songs for Brennan Jones
+        { title: "rip corbin", file: "songs/brennan_jones/rip_corbin.mp4" }
+
     ],
     "Playboi Carti": [
         { title: "Mileage (feat. Chief Keef)", file: "songs/playboi_carti/mileage.mp3" },
