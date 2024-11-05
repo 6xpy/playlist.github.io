@@ -1,7 +1,3 @@
-const urlParams = new URLSearchParams(window.location.search);
-const artistName = urlParams.get('name');
-document.getElementById('artist-name').innerText = artistName;
-
 const artistData = {
     "Brennan Jones": {
         img: "images/brennan_jones.jpg",
@@ -42,7 +38,128 @@ const artistData = {
             { title: "Old Money", file: "songs/playboi_carti/old_money.mp3" }
         ]
     },
-    // Add other artists' details and songs here
+    "Destroy Lonely": {
+        img: "images/destroy_lonely.jpg",
+        icon: "images/destroy_lonely.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for Destroy Lonely
+        ]
+    },
+    "Ken Carson": {
+        img: "images/ken_carson.jpg",
+        icon: "images/ken_carson.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for Ken Carson
+        ]
+    },
+    "greatestredefined": {
+        img: "images/greatestredefined.jpg",
+        icon: "images/greatestredefined.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for greatestredefined
+        ]
+    },
+    "ian": {
+        img: "images/ian.jpg",
+        icon: "images/ian.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for ian
+        ]
+    },
+    "Hi-C": {
+        img: "images/hi-c.jpg",
+        icon: "images/hi-c.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for Hi-C
+        ]
+    },
+    "Lil Uzi Vert": {
+        img: "images/lil_uzi_vert.jpg",
+        icon: "images/lil_uzi_vert.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for Lil Uzi Vert
+        ]
+    },
+    "LUCKI": {
+        img: "images/lucki.jpg",
+        icon: "images/lucki.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for LUCKI
+        ]
+    },
+    "OsamaSon": {
+        img: "images/osamason.jpg",
+        icon: "images/osamason.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for OsamaSon
+        ]
+    },
+    "Nettspend": {
+        img: "images/nettspend.jpg",
+        icon: "images/nettspend.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for Nettspend
+        ]
+    },
+    "Slash4L": {
+        img: "images/slash4l.jpg",
+        icon: "images/slash4l.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            // Add songs for Slash4L
+        ]
+    },
+    "Yeat": {
+        img: "images/yeat.jpg",
+        icon: "images/yeat.jpg",
+        title: "Album Title",
+        genre: "Genre",
+        year: "Year",
+        description: "Album Description",
+        songs: [
+            { title: "Lët ya know", file: "songs/yeat/let_ya_know.mp3" },
+            { title: "Dub", file: "songs/yeat/dub.mp3" }
+        ]
+    }
 };
 
 const artistInfo = artistData[artistName];
