@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Playlist</title>
+    <style>
+        .artist-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .artist {
+            margin: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .artist img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Favorite Songs</h1>
-    <ul id="playlist"></ul>
+    <h1>Select an Artist</h1>
+    <div class="artist-container" id="artist-container">
+        <!-- Artists will be dynamically inserted here -->
+    </div>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
