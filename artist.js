@@ -5,48 +5,8 @@ document.getElementById('artist-name').innerText = artistName;
 const songs = {
     "Brennan Jones": [
         { title: "rip corbin", file: "songs/brennan_jones/rip_corbin.mp3" }
-
     ],
-    "Playboi Carti": [
-        { title: "Mileage (feat. Chief Keef)", file: "songs/playboi_carti/mileage.mp3" },
-        { title: "Home (KOD)", file: "songs/playboi_carti/home.mp3" },
-        { title: "Old Money", file: "songs/playboi_carti/old_money.mp3" }
-    ],
-    "Destroy Lonely": [
-        // Add songs for Destroy Lonely
-    ],
-    "Ken Carson": [
-        // Add songs for Ken Carson
-    ],
-    "greatestredefined": [
-        // Add songs for greatestredefined
-    ],
-    "ian": [
-        // Add songs for ian
-    ],
-    "Hi-C": [
-        // Add songs for Hi-C
-    ],
-    "Lil Uzi Vert": [
-        // Add songs for Lil Uzi Vert
-    ],
-    "LUCKI": [
-        // Add songs for LUCKI
-    ],
-    "OsamaSon": [
-        // Add songs for OsamaSon
-    ],
-    "Nettspend": [
-        // Add songs for Nettspend
-    ],
-    "Slash4L": [
-        // Add songs for Slash4L
-    ],
-    "Yeat": [
-        { title: "Lët ya know", file: "songs/yeat/let_ya_know.mp3" },
-        { title: "Dub", file: "songs/yeat/dub.mp3" }
-    ]
-    // Add more songs per artist as needed
+    // Add other artists and their songs
 };
 
 const songList = document.getElementById('song-list');
