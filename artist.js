@@ -4,7 +4,7 @@ document.getElementById('artist-name').innerText = artistName;
 
 const songs = {
     "Brennan Jones": [
-        { title: "rip corbin", file: "songs/brennan_jones/rip_corbin.mp4" }
+        { title: "rip corbin", file: "songs/brennan_jones/rip_corbin.mp3" }
 
     ],
     "Playboi Carti": [
