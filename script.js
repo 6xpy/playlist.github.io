@@ -4,24 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             const playlist = document.getElementById('playlist');
             const lines = data.split('\n');
-            const songs = [];
-
-            // Extract song and artist information
+            
+            let songList = '';
             lines.forEach(line => {
                 if (line.startsWith('#EXTINF:')) {
                     const info = line.split(',')[1];
                     const [artist, title] = info.split(' - ');
-                    songs.push({ title, artist });
+                    songList += `<li>${title} by ${artist}</li>`;
                 }
-            });
-
-            // Sort songs by artist name alphabetically
-            songs.sort((a, b) => a.artist.localeCompare(b.artist));
-
-            // Generate the HTML list
-            let songList = '';
-            songs.forEach(song => {
-                songList += `<li>${song.title} by ${song.artist}</li>`;
             });
             playlist.innerHTML = songList;
         })
