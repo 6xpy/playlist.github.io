@@ -44,6 +44,7 @@ section {
     padding: 20px 56px;
     color: var(--darker);
     color: rgba(white, .8);
+    text-align: center; /* Centering text */
     .album-info {
         &:after {
             content: " ";
@@ -53,19 +54,7 @@ section {
         }
     }
     .album-art {
-        float: left;
-        width: 220px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        * {
-            border-radius: 3px;
-        }
-        img {
-            width: 100%;
-            margin-bottom: 10px;
-            margin-top: -80px;
-            box-shadow: 0 5px 60px -3px rgba(0, 0, 0, 0.18);
-        }
+        display: none; /* Hide album art */
     }
     .album-details {
         > * {
@@ -74,37 +63,25 @@ section {
     }
     h2 {
         display: flex;
-        align-items: center;
+        justify-content: center; /* Centering artist name */
         color: var(--dark);
-        font-size: 16px;
+        font-size: 36px; /* Making artist name bigger */
         font-weight: 500;
         text-transform: uppercase;
-        img {
-            width: 24px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+        margin: 20px 0;
     }
     .album-tracks {
         background: #f8f8f8;
         border: 1px solid #efefef;
         margin-top: 20px;
+        padding: 20px; /* Adding padding to center songs */
     }
     @media(max-width: 800px) {
         margin: 100px 36px 36px 36px;
     }
     @media(max-width: 700px) {
-        .album-art {
-            width: 100%;
-            img {
-                width: auto;
-                max-width: 100%;
-                margin: -100px auto 10px auto;
-                display: block;
-            }
-        }
         .album-details {
-            float: left;
+            float: none;
             max-width: 100%;
         }
     }
@@ -117,10 +94,21 @@ section {
     }
 }
 
+/* Style for back arrow */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
 ol {
     list-style-type: none;
-    padding: 20px 36px;
+    padding: 0;
     font-weight: 500;
+    text-align: center; /* Centering song list */
     li {
         counter-increment: number;
         display: flex;
@@ -150,10 +138,13 @@ ol {
                 }
             }
         }
+        audio {
+            flex: 1;
+            margin-right: 10px;
+        }
+        a {
+            color: var(--color);
+            text-decoration: none;
+        }
     }
-}
-
-.actions {
-    display: flex;
-    flex: 1 1 100%;
 }
