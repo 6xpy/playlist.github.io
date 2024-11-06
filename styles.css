@@ -45,7 +45,7 @@ section {
     padding: 20px 56px;
     color: var(--darker);
     color: rgba(white, .8);
-    text-align: center; /* Centering text */
+    text-align: center;
     .album-info {
         &:after {
             content: " ";
@@ -55,7 +55,7 @@ section {
         }
     }
     .album-art {
-        display: none; /* Hide album art */
+        display: none;
     }
     .album-details {
         > * {
@@ -64,10 +64,10 @@ section {
     }
     h2 {
         display: flex;
-        justify-content: center; /* Centering artist name */
-        color: var(--dark);
-        font-size: 36px; /* Making artist name bigger */
-        font-weight: 700; /* Making artist name bolder */
+        justify-content: center;
+        color: #505050; /* Darker shade */
+        font-size: 36px;
+        font-weight: 700; /* Bold */
         text-transform: uppercase;
         margin: 20px 0;
     }
@@ -75,7 +75,7 @@ section {
         background: #f8f8f8;
         border: 1px solid #efefef;
         margin-top: 20px;
-        padding: 20px; /* Adding padding to center songs */
+        padding: 20px;
     }
     @media(max-width: 800px) {
         margin: 100px 36px 36px 36px;
@@ -103,45 +103,41 @@ section {
     font-size: 24px;
     color: white;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Add animation */
+    transition: transform 0.3s ease;
 }
 
 .back-arrow:hover {
-    transform: scale(1.1); /* Hover effect */
+    transform: scale(1.1);
 }
 
 ol {
     list-style-type: none;
     padding: 0;
-    font-weight: 500;
-    text-align: left; /* Adjusted to ensure songs are properly centered */
+    text-align: left;
 }
 
 li {
     counter-increment: number;
     display: flex;
-    justify-content: space-between; /* Ensure even spacing on both sides */
+    justify-content: flex-start;
     align-items: center;
     height: 45px;
     color: var(--dark);
-    padding: 10px 20px; /* Add padding for better spacing */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-li:hover {
-    background-color: var(--hover-bg); /* Light grey on hover */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
 
 li:before {
-    content: counter(number) '. ';
-    margin-right: 10px; /* Space between number and song title */
-    color: var(--dark);
-    display: inline-block;
+    display: none; /* Remove duplicate numbers */
+}
+
+li:hover {
+    background-color: var(--hover-bg);
 }
 
 span {
-    font-size: 20px; /* Increase song title size */
-    margin-right: 10px; /* Add space between title and audio */
+    font-size: 20px;
+    margin-right: 10px;
 }
 
 audio {
@@ -152,18 +148,18 @@ audio {
 a {
     color: var(--color);
     text-decoration: none;
-    margin-left: 10px; /* Add space between audio and download icon */
-    font-size: 20px; /* Increase size of download icon */
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 /* Styling for the download icon */
 .download-icon {
-    width: 20px; /* Adjust size of the download icon */
+    width: 20px;
     height: 20px;
     display: inline-block;
     vertical-align: middle;
 }
 
 a:hover .download-icon {
-    fill: var(--hover-bg); /* Change color on hover */
+    fill: var(--hover-bg);
 }
