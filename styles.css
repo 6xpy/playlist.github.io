@@ -67,7 +67,7 @@ section {
         justify-content: center; /* Centering artist name */
         color: var(--dark);
         font-size: 36px; /* Making artist name bigger */
-        font-weight: 500;
+        font-weight: 700; /* Making artist name bolder */
         text-transform: uppercase;
         margin: 20px 0;
     }
@@ -114,17 +114,17 @@ ol {
     list-style-type: none;
     padding: 0;
     font-weight: 500;
-    text-align: center; /* Centering song list */
+    text-align: left; /* Adjusted to ensure songs are properly centered */
 }
 
 li {
     counter-increment: number;
     display: flex;
-    justify-content: center; /* Center each song */
+    justify-content: space-between; /* Ensure even spacing on both sides */
     align-items: center;
     height: 45px;
     color: var(--dark);
-    padding: 10px 0; /* Add padding for better spacing */
+    padding: 10px 20px; /* Add padding for better spacing */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
@@ -162,5 +162,8 @@ a {
     height: 20px;
     display: inline-block;
     vertical-align: middle;
-    content: '⬇'; /* Simple download icon */
+}
+
+a:hover .download-icon {
+    fill: var(--hover-bg); /* Change color on hover */
 }

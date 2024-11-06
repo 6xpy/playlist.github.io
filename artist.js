@@ -74,7 +74,7 @@ if (songs[artistName]) {
                 Your browser does not support the audio element.
             </audio>
             <a href="${song.file}" download>
-                <img src="icons/download-icon.png" alt="Download" class="download-icon">
+                <img src="path/to/download-icon.png" alt="Download" class="download-icon">
             </a>
         `;
         songList.appendChild(songDiv);
