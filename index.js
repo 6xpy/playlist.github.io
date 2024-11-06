@@ -1,17 +1,17 @@
 const artists = [
     { name: "Brennan Jones", img: "images/brennan_jones.jpeg" },
-    { name: "Playboi Carti", img: "images/playboi_carti.jpg" },
-    { name: "Destroy Lonely", img: "images/destroy_lonely.jpg" },
-    { name: "Ken Carson", img: "images/ken_carson.jpg" },
-    { name: "greatestredefined", img: "images/greatestredefined.jpg" },
-    { name: "ian", img: "images/ian.jpg" },
-    { name: "Hi-C", img: "images/hi-c.jpg" },
-    { name: "Lil Uzi Vert", img: "images/lil_uzi_vert.jpg" },
-    { name: "LUCKI", img: "images/lucki.jpg" },
-    { name: "OsamaSon", img: "images/osamason.jpg" },
-    { name: "Nettspend", img: "images/nettspend.jpg" },
-    { name: "Slash4L", img: "images/slash4l.jpg" },
-    { name: "Yeat", img: "images/yeat.jpg" }
+    { name: "Playboi Carti", img: "images/playboi_carti.jpeg" },
+    { name: "Destroy Lonely", img: "images/destroy_lonely.jpeg" },
+    { name: "Ken Carson", img: "images/ken_carson.jpeg" },
+    { name: "greatestredefined", img: "images/greatestredefined.jpeg" },
+    { name: "ian", img: "images/ian.jpeg" },
+    { name: "Hi-C", img: "images/hi-c.jpeg" },
+    { name: "Lil Uzi Vert", img: "images/lil_uzi_vert.jpeg" },
+    { name: "LUCKI", img: "images/lucki.jpeg" },
+    { name: "OsamaSon", img: "images/osamason.jpeg" },
+    { name: "Nettspend", img: "images/nettspend.jpeg" },
+    { name: "Slash4L", img: "images/slash4l.jpeg" },
+    { name: "Yeat", img: "images/yeat.jpeg" }
     // Add more artists as needed
 ];
 
