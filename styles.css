@@ -127,7 +127,7 @@ ol {
         justify-content: space-between;
         align-items: center;
         height: 45px;
-        color: var (--dark);
+        color: var(--dark);
         span {
             &:not(:last-child) {
                 margin-right: 2em;
@@ -139,11 +139,11 @@ ol {
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                color: var (--darker);
+                color: var(--darker);
                 &:before {
                     content: counter(number);
                     margin-right: 2em;
-                    color: var (--dark);
+                    color: var(--dark);
                     display: inline-block;
                     text-align: end;
                     width: 20px;
