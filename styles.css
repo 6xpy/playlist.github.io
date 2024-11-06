@@ -3,8 +3,8 @@
 :root {
     --color: #faa700;
     --color-light: #f5ede1;
-    --dark: #a7a7a7;
-    --darker: #303030;
+    --dark: #303030;
+    --darker: #131313;
     --hover-bg: #f0f0f0;
     --sans-serif: 'Roboto', sans-serif;
 }
@@ -65,9 +65,9 @@ section {
     h2 {
         display: flex;
         justify-content: center;
-        color: #505050; /* Darker shade */
+        color: var(--darker);
         font-size: 36px;
-        font-weight: 700; /* Bold */
+        font-weight: 700;
         text-transform: uppercase;
         margin: 20px 0;
     }
@@ -111,47 +111,58 @@ section {
 }
 
 ol {
-    list-style-type: decimal; /* Ensure numbers are displayed */
-    padding-left: 40px; /* Add padding to center content better */
+    list-style-type: none;
+    padding: 0;
+    font-weight: 500;
+    text-align: center; /* Ensure the entire song list is centered */
 }
 
 li {
+    counter-increment: number;
     display: flex;
-    justify-content: space-between; /* Ensure spacing between song title and audio player */
-    align-items: center;
+    justify-content: center; /* Center each song horizontally */
+    align-items: center; /* Center each song vertically */
     height: 45px;
     color: var(--dark);
-    padding: 10px 0;
+    padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
-/* Ensure song title and other content are centered */
-li span {
-    flex: 1;
-    text-align: left;
+li:hover {
+    background-color: var(--hover-bg);
+}
+
+li:before {
+    content: counter(number) '. ';
+    margin-right: 10px;
+    color: var(--dark);
+    display: inline-block;
+}
+
+span {
     font-size: 20px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 audio {
-    margin-left: 10px;
+    flex: 1;
+    margin-right: 10px;
 }
 
 a {
-    color: var(--color);
     text-decoration: none;
     margin-left: 10px;
-    font-size: 20px;
 }
 
-/* Styling for the download icon */
 .download-icon {
     width: 20px;
     height: 20px;
     display: inline-block;
     vertical-align: middle;
+    background: url('images/download-icon.png') no-repeat center center;
+    background-size: contain;
 }
 
 a:hover .download-icon {
-    fill: var(--hover-bg);
+    filter: brightness(0.8);
 }
