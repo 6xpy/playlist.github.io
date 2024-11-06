@@ -5,11 +5,12 @@
     --color-light: #f5ede1;
     --dark: #a7a7a7;
     --darker: #303030;
+    --hover-bg: #f0f0f0;
     --sans-serif: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: var (--sans-serif);
+    font-family: var(--sans-serif);
     background: #eeeeee;
 }
 
@@ -33,8 +34,8 @@ body {
     + section {
         margin-top: 60vmin;
         background: transparent;
-        --dark: rgba (white, .5);
-        --darker: rgba (white, .8);
+        --dark: rgba(white, .5);
+        --darker: rgba(white, .8);
     }
 }
 
@@ -42,8 +43,8 @@ section {
     background: #fafafa;
     margin: 100px 56px;
     padding: 20px 56px;
-    color: var (--darker);
-    color: rgba (white, .8);
+    color: var(--darker);
+    color: rgba(white, .8);
     text-align: center; /* Centering text */
     .album-info {
         &:after {
@@ -64,7 +65,7 @@ section {
     h2 {
         display: flex;
         justify-content: center; /* Centering artist name */
-        color: var (--dark);
+        color: var(--dark);
         font-size: 36px; /* Making artist name bigger */
         font-weight: 500;
         text-transform: uppercase;
@@ -76,16 +77,16 @@ section {
         margin-top: 20px;
         padding: 20px; /* Adding padding to center songs */
     }
-    @media (max-width: 800px) {
+    @media(max-width: 800px) {
         margin: 100px 36px 36px 36px;
     }
-    @media (max-width: 700px) {
+    @media(max-width: 700px) {
         .album-details {
             float: none;
             max-width: 100%;
         }
     }
-    @media (max-width: 550px) {
+    @media(max-width: 550px) {
         margin: 100px 20px 20px 20px;
         padding: 20px 16px;
         ol {
@@ -106,7 +107,7 @@ section {
 }
 
 .back-arrow:hover {
-    transform: scale (1.1); /* Hover effect */
+    transform: scale(1.1); /* Hover effect */
 }
 
 ol {
@@ -114,47 +115,52 @@ ol {
     padding: 0;
     font-weight: 500;
     text-align: center; /* Centering song list */
-    li {
-        counter-increment: number;
-        display: flex;
-        justify-content: center; /* Centering each song */
-        align-items: center;
-        height: 45px;
-        color: var (--dark);
-        span {
-            &:not(:last-child) {
-                margin-right: 2em;
-                @media (max-width: 700px) {
-                    margin-right: 1em;
-                }
-            }
-            &:first-child {
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                color: var (--darker);
-                &:before {
-                    content: counter (number);
-                    margin-right: 2em;
-                    color: var (--dark);
-                    display: inline-block;
-                    text-align: end;
-                    width: 20px;
-                }
-            }
-        }
-        audio {
-            flex: 1;
-            margin-right: 10px;
-        }
-        a {
-            color: var (--color);
-            text-decoration: none;
-        }
-    }
 }
 
-.actions {
+li {
+    counter-increment: number;
     display: flex;
-    flex: 1 1 100%;
+    justify-content: center; /* Center each song */
+    align-items: center;
+    height: 45px;
+    color: var(--dark);
+    padding: 10px 0; /* Add padding for better spacing */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+li:hover {
+    background-color: var(--hover-bg); /* Light grey on hover */
+}
+
+li:before {
+    content: counter(number) '. ';
+    margin-right: 10px; /* Space between number and song title */
+    color: var(--dark);
+    display: inline-block;
+}
+
+span {
+    font-size: 20px; /* Increase song title size */
+    margin-right: 10px; /* Add space between title and audio */
+}
+
+audio {
+    flex: 1;
+    margin-right: 10px;
+}
+
+a {
+    color: var(--color);
+    text-decoration: none;
+    margin-left: 10px; /* Add space between audio and download icon */
+    font-size: 20px; /* Increase size of download icon */
+}
+
+/* Styling for the download icon */
+.download-icon {
+    width: 20px; /* Adjust size of the download icon */
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    content: '⬇'; /* Simple download icon */
 }

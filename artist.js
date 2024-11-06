@@ -64,16 +64,18 @@ const songs = {
 
 const songList = document.getElementById('song-list');
 if (songs[artistName]) {
-    songs[artistName].forEach(song => {
+    songs[artistName].forEach((song, index) => {
         const songDiv = document.createElement('li');
         songDiv.className = 'song-container';
         songDiv.innerHTML = `
-            <span>${song.title}</span>
+            <span>${index + 1}. ${song.title}</span>
             <audio controls>
                 <source src="${song.file}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-            <a href="${song.file}" download>Download</a>
+            <a href="${song.file}" download>
+                <img src="icons/download-icon.png" alt="Download" class="download-icon">
+            </a>
         `;
         songList.appendChild(songDiv);
     });
