@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
+.artist {
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.artist:hover {
+    transform: scale(1.2); /* Enlarge the image on hover */
+}
+
+.artist-container {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Existing CSS */
 :root {
     --color: #faa700;
     --color-light: #f5ede1;
