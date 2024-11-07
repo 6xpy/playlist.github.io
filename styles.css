@@ -126,9 +126,8 @@ ol {
 }
 
 li {
-    counter-increment: number;
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
+    justify-content: space-between; /* Space items apart */
     align-items: center;
     height: 70px;
     color: var(--dark);
@@ -141,23 +140,15 @@ li:hover {
     background-color: var(--hover-bg);
 }
 
-li:before {
-    content: counter(number) '. ';
-    margin-right: 30px; /* Add more space to avoid overlap */
-    color: var(--dark);
-    display: inline-block;
-}
-
 .play-pause-icon {
     display: none; /* Hide play/pause icon initially */
     position: absolute;
-    left: 0;
-    width: 24px; /* Adjust the size of the icon */
-    height: 24px;
+    left: 10px; /* Position it properly to the left */
+    width: 30px; /* Adjust the size of the icon */
+    height: 30px;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    margin-left: -30px; /* Position it properly without blocking the number */
 }
 
 li:hover .play-pause-icon {
@@ -172,9 +163,15 @@ li:hover .play-pause-icon {
     background-image: var(--pause-icon); /* Use custom pause icon */
 }
 
-span {
+.song-title {
+    flex: 1; /* Allow title to take available space */
+    margin-left: 50px; /* Add margin to accommodate play icon */
     font-size: 20px;
-    margin-right: 10px;
+}
+
+.song-duration {
+    font-size: 18px; /* Adjust font size for duration */
+    color: var(--dark);
 }
 
 audio {

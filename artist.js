@@ -113,7 +113,8 @@ if (songs[artistName]) {
         songDiv.innerHTML = `
             <div class="play-pause-icon play-icon" onclick="togglePlayPause(${index})" data-index="${index}" data-file="${song.file}"></div>
             <span>${index + 1}. ${song.title}</span>
-            <audio id="audio-${index}" src="${song.file}"></audio>
+            <span id="duration-${index}" class="song-duration">0:00</span>
+            <audio id="audio-${index}" src="${song.file}" onloadedmetadata="setDuration(${index})"></audio>
             <a href="${song.file}" download>
                 <img src="images/download-icon.png" alt="Download" class="download-icon">
             </a>
@@ -122,6 +123,15 @@ if (songs[artistName]) {
     });
 } else {
     document.getElementById('song-list').innerHTML = `<p>No songs available for ${artistName}.</p>`;
+}
+
+// Function to set song duration
+function setDuration(index) {
+    const audio = document.getElementById(`audio-${index}`);
+    const duration = document.getElementById(`duration-${index}`);
+    const minutes = Math.floor(audio.duration / 60);
+    const seconds = Math.floor(audio.duration % 60).toString().padStart(2, '0');
+    duration.innerText = `${minutes}:${seconds}`;
 }
 
 // Add event listeners for play/pause functionality
