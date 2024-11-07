@@ -143,7 +143,7 @@ li:hover {
 .play-pause-icon {
     display: block; /* Ensure play/pause icon is always visible */
     position: absolute;
-    left: 0; /* Position it properly to the left */
+    left: 10px; /* Position it properly to the left */
     width: 40px; /* Adjust the size of the icon */
     height: 40px;
     background-size: contain;
@@ -168,6 +168,7 @@ li:hover {
 .song-duration {
     font-size: 18px; /* Adjust font size for duration */
     color: var(--dark);
+    margin-left: 10px; /* Adjust the margin to position beside download button */
 }
 
 audio {
@@ -177,6 +178,8 @@ audio {
 a {
     text-decoration: none;
     margin-left: 10px;
+    display: flex; /* Align duration and download icon horizontally */
+    align-items: center;
 }
 
 .download-icon {

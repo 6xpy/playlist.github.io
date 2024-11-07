@@ -114,8 +114,8 @@ if (songs[artistName]) {
             <div class="play-pause-icon play-icon" onclick="togglePlayPause(${index})" data-index="${index}" data-file="${song.file}"></div>
             <span class="song-title">${index + 1}. ${song.title}</span>
             <audio id="audio-${index}" src="${song.file}" onloadedmetadata="setDuration(${index})"></audio>
-            <span id="duration-${index}" class="song-duration">0:00</span>
             <a href="${song.file}" download>
+                <span id="duration-${index}" class="song-duration">0:00</span>
                 <img src="images/download-icon.png" alt="Download" class="download-icon">
             </a>
         `;
