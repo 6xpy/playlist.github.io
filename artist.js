@@ -111,13 +111,9 @@ if (songs[artistName]) {
         const songDiv = document.createElement('li');
         songDiv.className = 'song-container';
         songDiv.innerHTML = `
-            <span class="play-pause-icon">▶️</span> <!-- Play/Pause Icon -->
-            <img src="${songs[artistName].cover}" alt="Album Cover" class="album-cover">
+            <div class="play-pause-icon play-icon" onclick="togglePlayPause(${index})" data-index="${index}" data-file="${song.file}"></div>
             <span>${index + 1}. ${song.title}</span>
-            <audio controls>
-                <source src="${song.file}" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <audio id="audio-${index}" src="${song.file}"></audio>
             <a href="${song.file}" download>
                 <img src="images/download-icon.png" alt="Download" class="download-icon">
             </a>
@@ -126,4 +122,33 @@ if (songs[artistName]) {
     });
 } else {
     document.getElementById('song-list').innerHTML = `<p>No songs available for ${artistName}.</p>`;
+}
+
+// Add event listeners for play/pause functionality
+let currentAudio = null;
+
+function togglePlayPause(index) {
+    const audio = document.getElementById(`audio-${index}`);
+    const playPauseIcon = document.querySelector(`.play-pause-icon[data-index="${index}"]`);
+
+    if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
+        const currentIcon = document.querySelector(`.play-pause-icon[data-index="${currentAudio.dataset.index}"]`);
+        if (currentIcon) {
+            currentIcon.classList.remove('pause-icon');
+            currentIcon.classList.add('play-icon');
+        }
+    }
+
+    if (audio.paused) {
+        audio.play();
+        playPauseIcon.classList.remove('play-icon');
+        playPauseIcon.classList.add('pause-icon');
+        currentAudio = audio;
+    } else {
+        audio.pause();
+        playPauseIcon.classList.remove('pause-icon');
+        playPauseIcon.classList.add('play-icon');
+        currentAudio = null;
+    }
 }
