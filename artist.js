@@ -39,8 +39,9 @@ const songs = {
         ]
     },
     "Ken Carson": {
-        cover: "images/ken_carson_cover.jpg",
+        cover: "images/ken_carson_cover.png",
         tracks: [
+            { title: "glock 19", file: "songs/ken_carson/glock_19.mp3" },
             // Add songs for Ken Carson
         ]
     },

@@ -46,53 +46,31 @@ body {
 
 body {
     font-family: var(--sans-serif);
-    background: #eeeeee;
+    background: white;
 }
 
 body {
-    background: #0a1a24;
+    background: white;
 }
 
 .background {
+    position: relative;
     width: 100%;
-    height: 56.25vw;
-    background: url(https://cdn.klove.com/images/music/artists/bios/SkilletUnleashed.KLArtist.jpg) center/cover;
-    box-shadow: inset 0px -17vw 20vw 1vw #0a1a24;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    img {
-        max-width: 100%;
-        max-height: 100vh;
-        box-shadow: inset 0px -17vw 30vw 1vw #131313;
-    }
-    + section {
-        margin-top: 60vmin;
-        background: transparent;
-        --dark: rgba(white, .5);
-        --darker: rgba(white, .8);
-    }
+    background: white;
+    padding-top: 60px; /* Adjust to maintain layout */
 }
 
+
 section {
-    background: #fafafa;
-    margin: 100px 56px;
+    position: relative;
+    background: white;
+    margin: 56px;
     padding: 20px 56px;
     color: var(--darker);
-    color: rgba(white, .8);
     text-align: center;
-    .album-info {
-        display: flex; /* Align items horizontally */
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        &:after {
-            content: " ";
-            display: block;
-            height: 0;
-            clear: both;
-        }
-    }
+}
+
+    
     .album-art {
         width: 200px; /* Increased size of album cover */
         height: 200px;
@@ -118,38 +96,47 @@ section {
         margin-top: 20px;
         padding: 20px;
     }
-    @media(max-width: 800px) {
-        margin: 100px 36px 36px 36px;
+    @media (max-width: 800px) {
+        section {
+            margin: 100px 36px 36px 36px;
+        }
     }
-    @media(max-width: 700px) {
+    
+    @media (max-width: 700px) {
         .album-details {
             float: none;
             max-width: 100%;
         }
     }
-    @media(max-width: 550px) {
-        margin: 100px 20px 20px 20px;
-        padding: 20px 16px;
+    
+    @media (max-width: 550px) {
+        section {
+            margin: 100px 20px 20px 20px;
+            padding: 20px 16px;
+        }
+        
         ol {
             padding: 16px;
         }
     }
-}
 
 /* Style for back arrow */
+/* Style for back arrow */
 .back-arrow {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
     font-size: 24px;
-    color: white;
+    color: black; /* Black color for better visibility */
     cursor: pointer;
     transition: transform 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 .back-arrow:hover {
     transform: scale(1.1);
 }
+
 
 ol {
     list-style-type: none;
@@ -227,3 +214,144 @@ a {
 a:hover .download-icon {
     filter: brightness(0.8);
 }
+
+/* Add these styles to your existing styles.css file */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px; /* Adjust this value to control vertical positioning */
+    color: var(--dark);
+    font-family: var(--sans-serif);
+}
+
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto; /* Reduced top margin */
+    max-width: 1200px; /* Optional: limit container width */
+    padding: 0 20px;
+}
+
+h1 {
+    position: relative;
+    font-family: var(--sans-serif);
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #ff0000, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 0, 0, 0);
+    color: transparent;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white; /* Ensure the background color is white */
+}
+
+h1 {
+    text-align: center; /* Center the title */
+    margin-top: 20px; /* Add some top margin */
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+
+/* Shining Text Animation Effect */
+.shining-text {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #ff0000, #000); /* Change to red */
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.artist-container {
+    display: flex; /* Display artists horizontally */
+    flex-wrap: wrap; /* Wrap to the next line if necessary */
+    justify-content: center; /* Center the artist containers */
+    margin: 50px auto; /* Add top margin to lower the artist images */
+    background-color: white; /* Ensure the container has a white background */
+}
+
+.artist {
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.artist img {
+    width: 150px; /* Ensure all images are the same size */
+    height: 150px;
+    border-radius: 50%;
+}
+
+.artist:hover {
+    transform: scale(1.2); /* Enlarge the image on hover */
+}
+
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+.waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-transform: uppercase;
+    animation: none; /* Remove the bounce animation */
+}
+
+
+
+

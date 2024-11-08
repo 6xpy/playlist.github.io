@@ -16,10 +16,23 @@ const artists = [
 ];
 
 const artistContainer = document.getElementById('artist-container');
-artists.forEach(artist => {
+
+artists.forEach((artist, index) => {
     const artistDiv = document.createElement('div');
     artistDiv.className = 'artist';
-    artistDiv.innerHTML = `<img src="${artist.img}" alt="${artist.name}"><p>${artist.name}</p>`;
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'waviy';
+
+    // Create span elements for each letter in the artist's name
+    artist.name.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.style.setProperty('--i', i + 1);
+        span.textContent = char;
+        nameDiv.appendChild(span);
+    });
+
+    artistDiv.innerHTML = `<img src="${artist.img}" alt="${artist.name}">`;
+    artistDiv.appendChild(nameDiv);
     artistDiv.onclick = () => window.location.href = `artist.html?name=${encodeURIComponent(artist.name)}`;
     artistContainer.appendChild(artistDiv);
 });
